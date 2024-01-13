@@ -1,22 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hourly Employee Overtime Calculation</title>
-</head>
-<body>
-  <form onsubmit="event.preventDefault(); paySalary()">
-    <input id="name" type="text" value="STUDENT'S NAME HERE">
-    <input id="hours" type="text" value="50">
-    <br>
-    <button type="submit">Calculate</button>
-  </form>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hourly Employee Overtime Calculation</title>
+    <!-- Bootstrap CSS link -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container glass-container">
+      <h1>Overtime Pay Calculator</h1>
+      <i class="text-warning"
+        >This overtime pay calculator project is calculating the value of
+        overtime pay given the base rate of $10, and the overtime rate being
+        $11.50</i
+      >
+      <form onsubmit="event.preventDefault(); paySalary()">
+        <div class="form-group">
+          <label for="name">Employee Name</label>
+          <input
+            id="name"
+            type="text"
+            class="form-control"
+            placeholder="Name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="hours">Employee Total Hours Worked</label>
+          <input id="hours" type="text" class="form-control" placeholder="50" />
+        </div>
+        <button type="submit" class="btn btn-primary">Calculate</button>
+      </form>
 
-  <span id="name-output"></span>
-  <br>
-  <span id="pay"></span>
+      <div>
+        <span id="name-output"></span>
+        <br />
+        <span id="pay"></span>
+      </div>
+    </div>
 
-  <script src="script.js"></script>
-</body>
+    <!-- Bootstrap JS and Popper.js scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
 </html>
